@@ -1,0 +1,229 @@
+* {
+    text-align: center;
+    font-family: Constantia;
+}
+
+html {
+    background-color:black;
+    overflow: auto;
+}
+
+header {
+    height: 6vh;
+    background-color: rgb(238, 225, 207);
+    font-size: 1.5rem;
+}
+
+#footer {
+    height: 6vh;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(238, 225, 207);
+}
+
+table {
+    display: table;
+    outline: white thick solid;
+    border-radius: .1rem;
+    background-color: rgb(238, 225, 207);
+    border: black thin double;
+    margin: 5vh auto 5vh auto;
+}
+
+th {
+    font-size: 1.2rem;
+}
+
+td > button {
+    display: block;
+    overflow: hidden;
+    height: 3vh;
+    background-color: white;
+    border: black thin double;
+}
+
+td > button:hover {
+    background-color: rgb(245, 241, 237);
+}
+
+.grid_container {
+    outline: white thin double;
+    border: black thin double;
+    border-radius: .1rem;
+    display: none;
+    background-color: rgb(238, 225, 207);
+    max-width: 50vw;
+    margin: auto;
+    padding: 1%;
+    overflow: hidden;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+}
+
+
+.grid_container > span {
+    outline: black thin solid;
+    background-color: white;
+}
+
+#zNumber:empty::before {
+    content: "Z Number";
+    color: grey;
+}
+
+#userName:empty::before {
+    content: "Username";
+    color: grey;
+}
+
+#passWord:empty::before {
+    content: "Password";
+    color: grey;
+}
+
+#expiration:empty::before {
+    content: "Expiration YYYYMMDD040000Z";
+    color: grey;
+}
+
+#lastName:empty::before {
+    content: "Last Name";
+    color: grey;
+}
+
+#firstName:empty::before {
+    content: "First Name";
+    color: grey;
+}
+
+#middleInitial:empty::before {
+    content: "Middle Initial";
+    color: grey;
+}
+
+#department:empty::before {
+    content: "Department";
+    color: grey;
+}
+
+#affiliation:empty::before {
+    content: "Affiliation";
+    color: grey;
+}
+
+#email:empty::before {
+    content: "Email";
+    color: grey;
+}
+
+#address:empty::before {
+    content: "Address";
+    color: grey;
+}
+
+#city:empty::before {
+    content: "City";
+    color: grey;
+}
+
+#state:empty::before {
+    content: "State";
+    color: grey;
+}
+
+#zip:empty::before {
+    content: "Zip Code";
+    color: grey;
+}
+
+#dob:empty::before {
+    content: "Date of Birth YYYYMMDD";
+    color: grey;
+}
+
+#phone:empty::before {
+    content: "Phone Number 000-000-0000";
+    color: grey;
+}
+
+#sponsor:empty::before {
+    content: "Sponsor/Contact";
+    color: grey;
+}
+
+.grid_container > * > * {
+    width: 25vw;
+}
+
+.grid_container > *:not(#outputHeader):hover {
+    background-color: rgb(235, 226, 226);
+}
+
+.grid_container > *:not(:first-child) {
+    display: none;
+}
+
+#outputHeader {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-size: 1.35rem;
+}
+
+#output {
+    display: none;
+    min-width: 25vw;
+    max-width: 70vw;
+    min-height: 3vh;
+    max-height: fit-content;
+    background-color: white;
+    outline: black thin double;
+}
+
+#output:empty::before {
+    content: "Enter Text Here";
+    color: grey;
+}
+
+#output:hover {
+    cursor: text;
+    background-color: rgb(235, 226, 226);
+}
+
+#copy, #save {
+    display: block;
+    margin: auto;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: fit-content;
+}
+
+#copy:hover {
+    background-color: rgb(245, 241, 237);
+}
+
+#alert {
+    display: none;
+    animation: fadeInAndOut 1s linear forwards;
+}
+
+#logging, #logs {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeInAndOut {
+    0%,100% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1;
+    }
+}

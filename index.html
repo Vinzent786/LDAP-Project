@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+        <!-- <script src="test.js" defer></script> -->
+    </head>
+    <header>
+        <div>
+            <button>1</button><button>2</button><button>3</button>
+        </div>
+    </header>
+    <body>
+        <table>
+            <thead><th>LDAP Paramaters</th></thead>
+            <tbody>
+            <tr>
+                <td><button id="table_button1">Add Guest Account</button></td>
+            </tr>
+            <tr>
+                <td><button id="table_button2">Modify Guest Account</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="grid" class="grid_container">
+            <span contenteditable="true" id="zNumber"></span>
+            <span contenteditable="true" id="userName"></span>
+            <span contenteditable="true" id="passWord">$(/home/jpdalbec/bin/pwgen -B 10 1)</span>
+            <span contenteditable="true" id="expiration"></span>
+            <span contenteditable="true" id="lastName"></span>
+            <span contenteditable="true" id="firstName"></span>
+            <span contenteditable="true" id="middleInitial"></span>
+            <span contenteditable="true" id="department"></span>
+            <span contenteditable="true" id="affiliation"></span>
+            <span contenteditable="true" id="email"></span>
+            <span contenteditable="true" id="address"></span>
+            <span contenteditable="true" id="city"></span>
+            <span contenteditable="true" id="state"></span>
+            <span contenteditable="true" id="zip"></span>
+            <span contenteditable="true" id="dob"></span>
+            <span contenteditable="true" id="phone"></span>
+            <span contenteditable="true" id="sponsor"></span>
+            <div id="outputHeader">Output</div>
+            <span contenteditable="true" id="output"></span>  
+            <button id="copy">Copy Text</button>
+            <button id="save">Save</button>
+            <div id="alert">Text has been copied</div>
+            <div id="logging"><b>Logs</b></div>
+            <div id="logs"></div>
+        </div>
+    </body>body>
+    <div id="footer">e</div>
+</html>
