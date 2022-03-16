@@ -89,11 +89,11 @@ function main() {
     // Displays next HTML element, appends parameter list, calls write_output()
     for (let i = 0; i < keys.length; i++) {
         gridElements[keys[i]].addEventListener('keydown', (event) => {
-            if (event.code === 'Enter' && i !== 16) {
+            if (event.code === 'Tab' && i !== 16) {
                 gridElements[keys[i + 1]].style.display = 'block';
                 paramaters.push(gridElements[keys[i]].textContent);
                 write_output();
-            } else if (event.code === 'Enter' && i === 16)
+            } else if (event.code === 'Tab' && i === 16)
             {
                 paramaters.push(gridElements[keys[i]].textContent);
                 write_output();
@@ -120,6 +120,7 @@ const updateURL = 'https://api.jsonbin.io/v3/b/6195199f62ed886f914fe335';
 function update(){
 
     const logs = document.getElementById('logs');
+    let data;
 
     document.getElementById('logging').style.display = 'inline-block';
     logs.style.display = 'inline-block';
@@ -135,7 +136,7 @@ function update(){
     
         let read_data = (response) => {
             
-            let data = response.record;
+            data = response.record; // Response from JSONbin
             write(data);
         }
     
@@ -177,11 +178,14 @@ function update(){
             headers: header,
             body: JSON.stringify(data)
         });
+
     
         fetch(request)
+        .then(() => {
+            console.log(data)
+        })
         .catch((err) => {
             alert(`There was an error saving: ${err}`)
         });
     }
 }
-
